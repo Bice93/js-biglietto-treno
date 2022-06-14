@@ -11,18 +11,35 @@ const kmTravel = parseInt( prompt ("Inserisci i chilometri da percorrere") );
 const userAge = parseInt( prompt ("Inserisci la tua età") );
 console.log (kmTravel, userAge);
 
-let ticketPrice = kmTravel * 0.21;
-console.log(ticketPrice.toFixed(2));
+   let ticketPrice = kmTravel * 0.21;
+   console.log(ticketPrice.toFixed(2));
 
-if (userAge < 18) {
-    ticketPrice = ticketPrice - ((ticketPrice * 20) / 100);
-    console.log(`Il passeggero è minorenne, il prezzo del biglietto è: ${ticketPrice.toFixed(2)}`);
-} else if (userAge > 65) {
-    ticketPrice = ticketPrice - ((ticketPrice * 40) / 100);
-    console.log(`Il passeggero è un over 65, il prezzo del biglietto è: ${ticketPrice.toFixed(2)}`);
-} else {
-    console.log(`Il prezzo del biglietto è: ${ticketPrice.toFixed(2)}`);
-}
+   if (userAge < 18) {
+       ticketPrice = ticketPrice - ((ticketPrice * 20) / 100);
+       console.log(`Il passeggero è minorenne, il prezzo del biglietto è: € ${ticketPrice.toFixed(2)}`);
+   } else if (userAge > 65) {
+       ticketPrice = ticketPrice - ((ticketPrice * 40) / 100);
+       console.log(`Il passeggero è un over 65, il prezzo del biglietto è: € ${ticketPrice.toFixed(2)}`);
+   } else {
+       console.log(`Il prezzo del biglietto è: € ${ticketPrice.toFixed(2)}`);
+   }
+
+
+//   if ( (isNaN(userAge) == true) || (isNaN(kmTravel) == true) ) {
+//       console.log(`Numero non accettato, ricarica la pagina`);
+//   } else{
+//       if (userAge < 18) {
+//           const ticketPrice = ( (kmTravel * 0.21) - (((kmTravel * 0.21) * 20) / 100) );
+//           console.log(`Il passeggero è minorenne, il prezzo del biglietto è: € ${ticketPrice.toFixed(2)}`);
+//       } else if (userAge > 65) {
+//           const ticketPrice = ( (kmTravel * 0.21) - (((kmTravel * 0.21) * 40) / 100) );
+//           console.log(`Il passeggero è un over 65, il prezzo del biglietto è: € ${ticketPrice.toFixed(2)}`);
+//       } else {
+//           const ticketPrice = kmTravel * 0.21;
+//           console.log(`Il prezzo del biglietto è: € ${ticketPrice.toFixed(2)}`);
+//       }
+//   }
+
 
 
 
